@@ -22,7 +22,7 @@
   "devDependencies": {
     "mocha": "1.x.x",
     "nock": "0.x.x",
-    "coffee-script": "1.7.x"
+    "coffee-script": "1.8.x"
   },
   "scripts": {
     "test": "mocha --compilers coffee:coffee-script/register"

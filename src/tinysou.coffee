@@ -2,6 +2,7 @@ Client = require './client'
 Engine = require './engine'
 Collection = require './collection'
 Document = require './document'
+Analytics = require './analytics'
 
 
 class Tinysou
@@ -10,6 +11,7 @@ class Tinysou
     @engines = new Engine @client
     @collections = new Collection @client
     @documents = new Document @client
+    @analytics = new Analytics @client
 
   search: (engineName, searchInfo, callback) ->
     @client.post "/engines/#{engineName}/search", searchInfo, callback

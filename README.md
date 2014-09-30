@@ -214,6 +214,48 @@ tinysou.autocomplete('blog', {
 });
 ```
 
+#### Analytics
+
+search analytics
+
+```javascript
+tinysou.analytics.search('blog', {
+  function: 'count'
+}, function(err, res) {
+  console.log(res);
+});
+```
+
+autocomplete analytics
+
+```javascript
+tinysou.analytics.autocomplete('blog', {
+  function: 'count'
+}, function(err, res) {
+  console.log(res);
+});
+```
+
+search click analytics
+
+```javascript
+tinysou.analytics.searchClick('blog', {
+  function: 'count'
+}, function(err, res) {
+  console.log(res);
+});
+```
+
+autocomplete click analytics
+
+```javascript
+tinysou.analytics.autocompleteClick('blog', {
+  function: 'count'
+}, function(err, res) {
+  console.log(res);
+});
+```
+
 ### Examples
 
 See [examples](https://github.com/tinysou/tinysou-node/tree/master/examples)

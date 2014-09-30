@@ -48,8 +48,8 @@ describe 'Collection', ->
       assert.equal collection.name, res.name
 
   it 'should delete a collection', ->
-      nock(@host)
-        .delete("/v1/engines/#{@engine.name}/collections/#{@collection.name}")
-        .reply(204)
-      @collections.delete @engine.name, @collection.name, (err, res) ->
-        assert.equal true, res
+    nock(@host)
+      .delete("/v1/engines/#{@engine.name}/collections/#{@collection.name}")
+      .reply(204)
+    @collections.delete @engine.name, @collection.name, (err, res) ->
+      assert.equal true, res

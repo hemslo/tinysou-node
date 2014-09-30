@@ -3,7 +3,7 @@ Tinysou = require 'tinysou'
 TOKEN = 'YOUR_TOKEN'
 
 engine = {
-  name: 'YOUR-blog',
+  name: 'YOUR_BLOG',
   display_name: 'Blog'
 }
 
@@ -142,6 +142,22 @@ tasks = {
   autocomplete: ->
     tinysou.autocomplete engine.name, autocompleteInfo, (err, res) ->
       display("autocomplete in many collections", err, res)
+
+  searchAnalytics: ->
+    tinysou.analytics.search engine.name, {function: 'count'}, (err, res) ->
+      display("search analytics", err, res)
+
+  autocompleteAnalytics: ->
+    tinysou.analytics.autocomplete engine.name, {function: 'top'}, (err, res) ->
+      display("autocomplete analytics", err, res)
+
+  searchClickAnalytics: ->
+    tinysou.analytics.searchClick engine.name, {function: 'top'}, (err, res) ->
+      display("searchClick analytics", err, res)
+
+  autocompleteClickAnalytics: ->
+    tinysou.analytics.autocompleteClick engine.name, {function: 'count'}, (err, res) ->
+      display("autocompleteClick analytics", err, res)
 }
 
 
